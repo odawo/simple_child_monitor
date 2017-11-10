@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/toquiz"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
         android:layout_alignParentLeft="true"
@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/toinfo"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
         android:layout_alignParentRight="true"

@@ -1,9 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
     tools:context="com.example.vanessa.childdevelopmentapp.ZeroActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/questionno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:text="question no:"/>
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_below="@+id/questionno"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:text="question"/>
+
+        <RadioGroup
+            android:id="@+id/rsdiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/question"
+            android:layout_marginTop="10dp"
+            android:weightSum="0.04">
+
+            <RadioButton
+                android:id="@+id/btnchoice1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:text="radio button"/>
+
+            <RadioButton
+                android:id="@+id/btnchoice2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnchoice1"
+                android:padding="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:text="radio button"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</RelativeLayout>

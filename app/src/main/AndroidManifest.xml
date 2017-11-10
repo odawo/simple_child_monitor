@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChildMonitorQuiz" />
-        <activity android:name=".ZeroActivity"></activity>
+        <activity android:name=".ZeroActivity" />
+        <activity android:name=".FinalDisplay"></activity>
     </application>
 
 </manifest>

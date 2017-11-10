@@ -67,7 +67,7 @@ public class ChildMonitorQuiz extends AppCompatActivity {
         LayoutInflater layoutInflater = this.getLayoutInflater();
         View dialogView = layoutInflater.inflate(R.layout.activity_zero,null);
         zerodialog.setView(dialogView);
-        zerodialog.setTitle("AID REQUEST");
+        zerodialog.setTitle("child monitor");
 //        zerodialog.click
 //        zerodialog.setPositiveButton("Done", new DialogInterface.OnClickListener() {
 //            @Override
