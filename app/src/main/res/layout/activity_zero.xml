@@ -39,7 +39,7 @@
             android:text="question"/>
 
         <RadioGroup
-            android:id="@+id/rsdiogroup"
+            android:id="@+id/radiogroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/question"
@@ -66,6 +66,15 @@
                 android:text="radio button"/>
 
         </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/btnnext"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:layout_below="@+id/radiogroup"
+            android:background="@drawable/ic_btnnext"
+            android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
 
