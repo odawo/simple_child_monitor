@@ -35,6 +35,7 @@
             android:stepSize="1.0"
             android:rating="0.0"
             android:padding="20dp"
+            android:isIndicator="true"
             android:layout_below="@+id/results"/>
 
         <RelativeLayout

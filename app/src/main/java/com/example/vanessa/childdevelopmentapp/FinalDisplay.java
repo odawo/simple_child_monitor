@@ -19,6 +19,7 @@ public class FinalDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_display);
 
+
         //get rating bar object
         RatingBar bar=(RatingBar)findViewById(R.id.ratingbar);
         bar.setNumStars(5);

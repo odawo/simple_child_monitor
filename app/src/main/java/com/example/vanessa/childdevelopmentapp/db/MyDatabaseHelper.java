@@ -48,7 +48,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 //        create question table
         db.execSQL(sql);
 
-        addQuestions();
+        addzeroQuestions();
     }
 
 
@@ -99,7 +99,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return questionArrayList;
     }
 
-    private void addQuestions() {
+    private void addzeroQuestions() {
 
         Question q1=new Question("can a child do a?","yes", "no", "yes");
         this.addInitialQuestion(q1);
