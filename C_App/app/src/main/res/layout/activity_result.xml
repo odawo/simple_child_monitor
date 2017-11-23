@@ -41,7 +41,8 @@
             android:layout_centerHorizontal="true"
             android:numStars="5"
             android:stepSize="1.0"
-            android:rating="0.0"/>
+            android:rating="0.0"
+            android:isIndicator="true"/>
 
         <TextView
             android:id="@+id/textResult"

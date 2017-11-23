@@ -1,4 +1,4 @@
-package com.onlineicttutor.ictquiz.model;
+package com.onlineicttutor.child_monitor.model;
 
 /**
  * Created by alfiroj on 5/13/16.
@@ -9,8 +9,6 @@ public class Question {
     private String ANSWER;
     private String OptionA;
     private String OptionB;
-//    private String OptionC;
-//    private String OptionD;
 
     public Question(){
         id=0;
@@ -18,19 +16,13 @@ public class Question {
         ANSWER="";
         OptionA="";
         OptionB="";
-//        OptionC="";
-//        OptionD="";
     }
 
-    public Question(String quesTion, String opA, String opB,
-//    public Question(String quesTion, String opA, String opB, String opC,String opD,
-                    String ansWer) {
+    public Question(String quesTion, String opA, String opB, String ansWer) {
 
         QUESTION = quesTion;
         OptionA = opA;
         OptionB = opB;
-//        OptionC = opC;
-//        OptionD = opD;
         ANSWER = ansWer;
     }
 
@@ -74,19 +66,4 @@ public class Question {
         OptionB = optionB;
     }
 
-//    public String getOptionC() {
-//        return OptionC;
-//    }
-//
-//    public void setOptionC(String optionC) {
-//        OptionC = optionC;
-//    }
-//
-//    public String getOptionD() {
-//        return OptionD;
-//    }
-//
-//    public void setOptionD(String optionD) {
-//        OptionD = optionD;
-//    }
 }

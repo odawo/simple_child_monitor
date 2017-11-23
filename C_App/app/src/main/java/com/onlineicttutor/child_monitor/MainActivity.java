@@ -1,4 +1,4 @@
-package com.onlineicttutor.ictquiz;
+package com.onlineicttutor.child_monitor;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,9 +14,6 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -27,15 +24,36 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btnStart=(Button) findViewById(R.id.btnZeromonths);
-        btnStart.setOnClickListener(new View.OnClickListener() {
+        Button btnZero=(Button) findViewById(R.id.btnZeromonths);
+        btnZero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent conceptIntent=new Intent(MainActivity.this,ConceptActivity.class);
+                Intent conceptIntent=new Intent(MainActivity.this,ZeroConceptActivity.class);
                 startActivity(conceptIntent);
 
             }
         });
+
+        Button btnFour=(Button) findViewById(R.id.btnFourmonths);
+        btnFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent conceptIntent1=new Intent(MainActivity.this,FourConceptActivity.class);
+                startActivity(conceptIntent1);
+
+            }
+        });
+
+        Button btnSeven=(Button) findViewById(R.id.btnSevenmonths);
+        btnSeven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent conceptIntent2=new Intent(MainActivity.this,SevenConceptActivity.class);
+                startActivity(conceptIntent2);
+
+            }
+        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -77,7 +95,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_childqns) {
-            Intent conceptIntent=new Intent(MainActivity.this,ConceptActivity.class);
+            Intent conceptIntent=new Intent(MainActivity.this,ZeroConceptActivity.class);
             startActivity(conceptIntent);
         } else if (id == R.id.nav_childinfo) {
             Toast.makeText(this, "info classes", Toast.LENGTH_SHORT).show();

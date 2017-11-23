@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.onlineicttutor.ictquiz">
+    package="com.onlineicttutor.child_monitor">
 
     <!--<uses-permission android:name="android.permission.INTERNET" />-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -9,7 +9,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ict_quiz"
-        android:label="@string/app_name"
+        android:label="Child Monitor"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
@@ -19,8 +19,8 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:name="com.onlineicttutor.child_monitor.MainActivity"
+            android:label="Child Monitor"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,24 +34,41 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
         <activity
-            android:name=".ConceptActivity"
-            android:parentActivityName=".MainActivity">
+            android:name="com.onlineicttutor.child_monitor.ZeroConceptActivity"
+            android:parentActivityName="com.onlineicttutor.child_monitor.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.onlineicttutor.child_monitor.MainActivity" />
         </activity>
         <activity
-            android:name=".ResultActivity"
-            android:parentActivityName=".MainActivity">
+            android:name="com.onlineicttutor.child_monitor.FourConceptActivity"
+            android:parentActivityName="com.onlineicttutor.child_monitor.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.onlineicttutor.child_monitor.MainActivity" />
         </activity>
-        <activity android:name=".ViewAnswerActivity"
-            android:parentActivityName=".MainActivity">
+
+        <activity
+            android:name="com.onlineicttutor.child_monitor.SevenConceptActivity"
+            android:parentActivityName="com.onlineicttutor.child_monitor.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" /></activity>
+                android:value="com.onlineicttutor.child_monitor.MainActivity" />
+        </activity>
+
+
+        <activity
+            android:name="com.onlineicttutor.child_monitor.ResultActivity"
+            android:parentActivityName="com.onlineicttutor.child_monitor.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onlineicttutor.child_monitor.MainActivity" />
+        </activity>
+        <activity android:name="com.onlineicttutor.child_monitor.ViewAnswerActivity"
+            android:parentActivityName="com.onlineicttutor.child_monitor.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onlineicttutor.child_monitor.MainActivity" /></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.onlineicttutor.ictquiz;
+package com.onlineicttutor.child_monitor;
 
 import android.content.Intent;
 import android.support.v4.app.NavUtils;
@@ -9,9 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
@@ -42,7 +39,8 @@ public class ResultActivity extends AppCompatActivity {
         //display score
         bar.setRating(score);
 
-        tvAnsweredInfo.setText("You have answered "+score+" of "+totalQs+" questions  correctly!");
+//        tvAnsweredInfo.setText("You have answered "+score+" of "+totalQs+" questions  correctly!");
+        tvAnsweredInfo.setText("You have answered all questions");
 
         float percentage=(score*100)/totalQs;
 
@@ -67,7 +65,7 @@ public class ResultActivity extends AppCompatActivity {
                 finish();
             }
         });
-//
+
 //        Button btnViewAnswer=(Button)findViewById(R.id.btnViewAnswer);
 //        btnViewAnswer.setOnClickListener(new View.OnClickListener() {
 //            @Override

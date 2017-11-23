@@ -1,4 +1,4 @@
-package com.onlineicttutor.ictquiz;
+package com.onlineicttutor.child_monitor;
 
 import org.junit.Test;
 

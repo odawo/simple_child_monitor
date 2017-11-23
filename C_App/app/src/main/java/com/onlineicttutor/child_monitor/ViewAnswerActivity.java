@@ -1,11 +1,10 @@
-package com.onlineicttutor.ictquiz;
+package com.onlineicttutor.child_monitor;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,8 +15,8 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.onlineicttutor.ictquiz.db.DBAdapter;
-import com.onlineicttutor.ictquiz.model.Question;
+import com.onlineicttutor.child_monitor.db.DBAdapter;
+import com.onlineicttutor.child_monitor.model.Question;
 
 import java.util.ArrayList;
 import java.util.HashMap;

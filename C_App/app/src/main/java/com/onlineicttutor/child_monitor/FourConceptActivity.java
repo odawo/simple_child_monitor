@@ -1,9 +1,9 @@
-package com.onlineicttutor.ictquiz;
+package com.onlineicttutor.child_monitor;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,21 +12,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.onlineicttutor.ictquiz.db.DBAdapter;
-import com.onlineicttutor.ictquiz.model.Question;
+import com.onlineicttutor.child_monitor.db.DBAdapter;
+import com.onlineicttutor.child_monitor.db.DBAdapterFour;
+import com.onlineicttutor.child_monitor.model.Question;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConceptActivity extends AppCompatActivity {
+public class FourConceptActivity extends AppCompatActivity {
 
    private List<Question> questionsList;
    private Question currentQuestion;
 
     private TextView txtQuestion,tvNoOfQs;
-    private RadioButton rbtnA, rbtnB, rbtnC,rbtnD;
+    private RadioButton rbtnA, rbtnB;
     private Button btnNext;
 
     private int obtainedScore=0;
@@ -46,8 +45,8 @@ public class ConceptActivity extends AppCompatActivity {
         init();
 
         //Initialize the database
-        final DBAdapter dbAdapter=new DBAdapter(this);
-        questionsList= dbAdapter.getAllQuestions();
+        final DBAdapterFour dbAdapter=new DBAdapterFour(this);
+        questionsList= dbAdapter.getFourQuestions();
         currentQuestion=questionsList.get(questionId);
 
         //Set question
@@ -78,7 +77,7 @@ public class ConceptActivity extends AppCompatActivity {
                         currentQuestion=questionsList.get(questionId);
                         setQuestionsView();
                     }else{
-                        Intent intent = new Intent(ConceptActivity.this, ResultActivity.class);
+                        Intent intent = new Intent(FourConceptActivity.this, ResultActivity.class);
 
                         Bundle b = new Bundle();
                         b.putInt("score", obtainedScore);
@@ -109,8 +108,6 @@ public class ConceptActivity extends AppCompatActivity {
         txtQuestion=(TextView)findViewById(R.id.tvQuestion);
         rbtnA=(RadioButton)findViewById(R.id.radio0);
         rbtnB=(RadioButton)findViewById(R.id.radio1);
-//        rbtnC=(RadioButton)findViewById(R.id.radio2);
-//        rbtnD=(RadioButton)findViewById(R.id.radio3);
 
         btnNext=(Button)findViewById(R.id.btnNext);
 
@@ -122,8 +119,6 @@ public class ConceptActivity extends AppCompatActivity {
     {
         rbtnA.setChecked(false);
         rbtnB.setChecked(false);
-//        rbtnC.setChecked(false);
-//        rbtnD.setChecked(false);
 
         answeredQsNo=questionId+1;
         tvNoOfQs.setText("Questions "+answeredQsNo+" of "+questionsList.size());
@@ -131,8 +126,6 @@ public class ConceptActivity extends AppCompatActivity {
         txtQuestion.setText(currentQuestion.getQUESTION());
         rbtnA.setText(currentQuestion.getOptionA());
         rbtnB.setText(currentQuestion.getOptionB());
-//        rbtnC.setText(currentQuestion.getOptionC());
-//        rbtnD.setText(currentQuestion.getOptionD());
 
         questionId++;
     }
